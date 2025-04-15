@@ -3,4 +3,4 @@ services:
     name: quotebot
     env: python
     buildCommand: ""
-    startCommand: "python app.py"
+    startCommand: "NEW_RELIC_CONFIG_FILE=newrelic.ini newrelic-admin run-program gunicorn app:app"
