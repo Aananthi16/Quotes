@@ -13,4 +13,6 @@ def home():
     return f"<h1>{random.choice(quotes)}</h1>"
 
 if __name__ == '__main__':
-    app.run()
+    port = int(os.environ.get("PORT", 10000))  # Use Render's PORT env var
+    app.run(host='0.0.0.0', port=port)     
+    
