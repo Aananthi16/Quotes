@@ -1,8 +1,7 @@
 from flask import Flask
-from otel-config import FlaskInstrumentor
 
 app = Flask(__name__)
-FlaskInstrumentor().instrument_app(app)
+
 quotes = [
     "The best way to predict the future is to invent it.",
     "Life is 10% what happens to us and 90% how we react to it.",
